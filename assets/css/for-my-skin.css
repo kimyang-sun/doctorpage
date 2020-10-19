@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+/* 상단 배너 */
+.bn-inner {
+  position: relative;
+  height: 100%;
+}
+
+.bn-inner .bn-inner-txt {
+  align-items: center;
+  height: 100%;
+}
+
+.bn-inner .bn-inner-txt-top {
+  color: #fff;
+}
+
+.bn-inner .bn-inner-txt-top h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.bn-inner .bn-inner-txt-top span {
+  font-size: 1.25em;
+}
+
+.video-top-bn .top-bn-img {
+  background-position: left;
+}
+
+.education-top-bn .top-bn-img,
+.sharing-top-bn .top-bn-img {
+  background-position: center;
+}
+
+@media (max-width: 767px) {
+  .bn-inner .bn-inner-txt {
+    padding: 0 15px;
+  }
+
+  .bn-inner .bn-inner-txt-top {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 50px 15px;
+    width: 100%;
+  }
+}
+
+/* 비디오 컨텐츠 */
+.video-list-wrap {
+  padding: 30px 0 120px;
+}
+
+.video-list {
+  margin: 0 -15px;
+  margin-top: 64px;
+}
+
+.video-list li {
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+  padding: 20px 15px;
+  position: relative;
+}
+
+.video-list li > div {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-list li .iframe-wrap {
+  position: relative;
+}
+
+.video-list li .iframe-wrap::before {
+  content: "";
+  display: block;
+  padding-top: calc(9 / 16 * 100%);
+}
+
+.video-list li .iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 비디오 컨텐츠 반응형 */
+@media (max-width: 1200px) {
+  .video-list {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrap {
+    font-size: 11px;
+  }
+
+  .video-list-wrap {
+    padding: 0 0 60px;
+  }
+
+  .video-list {
+    margin: 0 -7.5px;
+    margin-top: 30px;
+  }
+
+  .video-list li {
+    padding: 15px 7.5px;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* 교육 프로그램 */
+.education-wrap {
+  padding: 120px 0;
+}
+
+.education-list li {
+  box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-list li:not(:last-child) {
+  margin-bottom: 70px;
+}
+
+.education-list li > div {
+  width: 100%;
+}
+
+.education-list li .education-img {
+  align-self: center;
+}
+
+.education-list li .education-text {
+  padding-left: 30px;
+  position: relative;
+}
+
+.education-list li .education-text .label {
+  position: absolute;
+  right: 0;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #ccc;
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 27px 0 0 27px;
+}
+
+.education-list li .education-text h3 {
+  font-size: 1.75em;
+  font-weight: bold;
+  padding-top: 80px;
+}
+
+.education-list li .education-text p {
+  font-size: 0.875em;
+  padding-top: 20px;
+  max-width: 650px;
+}
+
+.education-list li .education-text .btn-wrap {
+  padding-top: 20px;
+  padding-right: 60px;
+  text-align: right;
+}
+
+.education-list li .education-text .btn-education {
+  display: inline-block;
+  color: #fff;
+  background-color: #363636;
+  padding: 10px 60px;
+  border-radius: 27px;
+  transition: all 0.3s;
+}
+
+.education-list li .education-text .btn-education:hover {
+  background-color: #666;
+}
+
+/* 교육 프로그램 반응형 */
+@media (min-width: 768px) {
+  .education-list li .education-img {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+
+  .education-list li .education-text {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+  }
+}
+
+@media (max-width: 767px) {
+  .education-wrap {
+    padding: 60px 0;
+  }
+
+  .education-list {
+    padding: 0 15px;
+  }
+
+  .education-list li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .education-list li .education-text p {
+    font-size: 1.25em;
+  }
+
+  .education-list li .education-text {
+    padding: 0 35px;
+  }
+
+  .education-list li .education-text .label {
+    padding: 10px 30px;
+  }
+
+  .education-list li .education-text h3 {
+    padding-top: 50px;
+  }
+
+  .education-list li .education-text .btn-wrap {
+    padding: 20px 0 30px;
+  }
+
+  .education-list li .education-text .btn-education {
+    width: 100%;
+    text-align: center;
+    font-size: 1.25em;
+  }
+}

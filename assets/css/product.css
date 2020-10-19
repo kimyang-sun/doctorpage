@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+/* product type 상단 배너 */
+.bn-inner {
+  position: relative;
+  height: 100%;
+}
+
+.product-top-bn .top-bn-img {
+  background-position: center;
+}
+
+.top-bn .bn-inner .bn-inner-txt {
+  height: 100%;
+  align-items: flex-end;
+}
+
+.top-bn .bn-inner .product-main-bn {
+  align-items: center;
+}
+
+.top-bn .bn-inner .bn-inner-txt h2 {
+  font-size: 2.5em;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.top-bn .bn-inner .bn-inner-txt span {
+  font-size: 1.25em;
+  color: #999;
+}
+
+.top-bn .bn-inner .bn-inner-txt .bn-inner-txt-bottom {
+  padding: 40px 0 50px;
+  width: 100%;
+}
+
+.top-bn .bn-inner .bn-inner-txt .bn-inner-txt-bottom span {
+  display: block;
+  color: #fff;
+}
+
+.cream-bn .bn-inner-txt-bottom {
+  background-color: rgba(135, 164, 217, 0.45);
+}
+
+.essence-bn .bn-inner-txt-bottom {
+  background-color: rgba(135, 217, 211, 0.45);
+}
+
+.maskpack-bn .bn-inner-txt-bottom {
+  background-color: rgba(212, 177, 143, 0.45);
+}
+
+.cleansing-bn .bn-inner-txt-bottom {
+  background-color: rgba(152, 152, 152, 0.45);
+}
+
+.sunblock-bn .bn-inner-txt-bottom {
+  background-color: rgba(252, 213, 106, 0.45);
+}
+
+.toner-bn .bn-inner-txt-bottom {
+  background-color: rgba(86, 174, 207, 0.45);
+}
+
+.lotion-bn .bn-inner-txt-bottom {
+  background-color: rgba(254, 160, 160, 0.45);
+}
+
+.ampule-bn .bn-inner-txt-bottom {
+  background-color: rgba(207, 160, 254, 0.45);
+}
+
+/* product type 상품들 */
+.item-section {
+  padding: 0;
+}
+
+.item-section .section-inner {
+  padding: 0 0 120px;
+}
+
+.section-inner-1 .product-title-area {
+  background-color: rgba(135, 164, 217, 0.15);
+}
+
+.section-inner-2 .product-title-area {
+  background-color: rgba(135, 217, 211, 0.15);
+}
+
+.section-inner-3 .product-title-area {
+  background-color: rgba(251, 249, 247, 1);
+}
+
+.section-inner-4 .product-title-area {
+  background-color: rgba(152, 152, 152, 0.15);
+}
+
+.product-title-area {
+  padding: 50px 0;
+}
+
+.product-title h3 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.product-title p {
+  font-size: 1.25em;
+  color: #999;
+  margin-bottom: 30px;
+}
+
+.section-inner-2 .product-title .btn-basic {
+  background-color: #87d9d3;
+  box-shadow: 0 5px 10px rgba(135, 217, 211, 0.5);
+}
+
+.section-inner-2 .product-title .btn-basic:hover {
+  background-color: #37c9bf;
+}
+
+.section-inner-3 .product-title .btn-basic {
+  background-color: #d4b18f;
+  box-shadow: 0 5px 10px rgba(212, 177, 143, 0.5);
+}
+
+.section-inner-3 .product-title .btn-basic:hover {
+  background-color: #cc843e;
+}
+
+.section-inner-4 .product-title .btn-basic {
+  background-color: #dcdcdc;
+  box-shadow: 0 5px 10px rgba(220, 220, 220, 0.5);
+}
+
+.section-inner-4 .product-title .btn-basic:hover {
+  background-color: #a2a2a2;
+}
+
+.item-section .item-list {
+  padding-top: 30px;
+}
+
+.section-inner-2 .item .item-hover {
+  background-color: rgba(135, 217, 211, 0.8);
+}
+
+.section-inner-3 .item .item-hover {
+  background-color: rgba(212, 177, 143, 0.8);
+}
+
+.section-inner-4 .item .item-hover {
+  background-color: rgba(220, 220, 220, 0.9);
+}
+
+.essence .item .item-hover {
+  background-color: rgba(135, 217, 211, 0.8);
+}
+
+.maskpack .item .item-hover {
+  background-color: rgba(212, 177, 143, 0.8);
+}
+
+.cleansing .item .item-hover {
+  background-color: rgba(152, 152, 152, 0.8);
+}
+
+.sunblock .item .item-hover {
+  background-color: rgba(252, 213, 106, 0.8);
+}
+
+.toner .item .item-hover {
+  background-color: rgba(86, 174, 207, 0.8);
+}
+
+.lotion .item .item-hover {
+  background-color: rgba(254, 160, 160, 0.8);
+}
+
+.ampule .item .item-hover {
+  background-color: rgba(207, 160, 254, 0.8);
+}
+
+/* product type 반응형 */
+@media (max-width: 767px) {
+  .wrap {
+    font-size: 11px;
+  }
+
+  .top-bn .bn-inner .bn-inner-txt {
+    padding: 0 15px;
+    align-items: center;
+  }
+
+  .top-bn .bn-inner .bn-inner-txt .bn-inner-txt-bottom {
+    padding: 40px 20px 50px;
+  }
+
+  .item-section .product-title-area {
+    padding: 60px 20px;
+  }
+
+  .item-section .section-inner {
+    padding: 0 0 80px;
+  }
+}

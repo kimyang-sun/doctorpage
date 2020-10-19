@@ -1,0 +1,775 @@
+@charset "UTF-8";
+
+/* 각 섹션 간격 공통 */
+section > .section-inner {
+  padding-top: 150px;
+}
+
+/* 메인 비주얼 슬라이더 */
+.main-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 0 !important;
+}
+
+.main-slider .slick-list,
+.main-slider .slick-track {
+  height: 100%;
+}
+
+/* 이 코드는 옆으로 넘어가는 슬라이더일 경우 이미지가 background css 로 되어 있으면 absolute 의 집인 relative 를 따로 주어야함.
+기존의 상위에 relative 는 너무 가로 길이가 김 (옆으로 넘어가는 슬라이더이기 때문)
+거기에 추가적으로 슬라이더 트랜지션에 scale 이 들어가 있다면 옆으로 침범하기 때문에 overflow:hidden 도 주어야 한다 */
+.main-slider .slick-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-slider .slider-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 메인 슬라이더 페이지 버튼 */
+.main-slider .slick-dots {
+  top: 50%;
+  right: 60px;
+  bottom: auto;
+  transform: translateY(-50%);
+  width: auto;
+}
+
+.main-slider .slick-dots li {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.main-slider .slick-dots li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.main-slider .slick-dots li button {
+  width: 11px;
+  height: 11px;
+  box-sizing: content-box;
+  background-color: #ccc;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.main-slider .slick-dots .slick-active button {
+  background-color: #fff;
+}
+
+.main-slider .slick-dots li button::before {
+  display: none;
+}
+
+/* 슬라이더 내부 텍스트 */
+.main-slider .slider-txt {
+  position: absolute;
+  max-width: 620px;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-40%);
+  text-align: center;
+  opacity: 0;
+  transition: all 0s 1s;
+}
+
+.main-slider .slick-center .slider-txt {
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: all 0.5s 0.6s;
+}
+
+.main-slider .reset-animation .slider-txt {
+  transform: translateY(-40%);
+  opacity: 0;
+  transition: all 0s;
+}
+
+.main-slider .slider-txt h2 {
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+
+.main-slider .slider-txt span {
+  font-size: 1.25em;
+}
+
+.main-slider .slider-txt .btn-more {
+  font-size: 1.125em;
+  display: inline-block;
+  width: 200px;
+  padding: 13.5px 0;
+  background-color: #383838;
+  color: #fff;
+}
+
+/* 메인 슬라이더 반응형 */
+@media (max-width: 991px) {
+  .main-slider {
+    height: 100vw;
+  }
+
+  .main-slider .slider-txt {
+    right: 5%;
+    max-width: 350px;
+    min-width: 320px;
+  }
+
+  .main-slider .slider-txt h2 {
+    font-size: 2.5em;
+  }
+
+  .main-slider .slider-txt .btn-more {
+    font-size: 1.25em;
+    width: 150px;
+  }
+
+  .main-slider .slick-dots {
+    top: auto;
+    left: 50%;
+    right: auto;
+    bottom: 20px;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .main-slider .slick-dots li {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-slider .slider-txt {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 575px) {
+  .main-slider {
+    height: 170vw;
+  }
+
+  .main-slider .slider-img {
+    background-position: 29%;
+  }
+
+  .main-slider .slider-txt {
+    top: 22%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(-40%);
+  }
+
+  .main-slider .slick-center .slider-txt {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .main-slider .reset-animation .slider-txt {
+    transform: translateX(-50%) translateY(-40%);
+  }
+}
+
+/* 피부 진단 상담 */
+.counsel-section .section-inner {
+  padding-top: 0;
+}
+
+.counsel-section .flex-box > div {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.counsel-section .counsel-txt {
+  align-self: center;
+  padding-left: 145px;
+}
+
+section h2.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+section p.sub-title {
+  font-size: 1.125em;
+  color: #999;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.counsel-section .counsel-txt .btn-box a {
+  padding: 13px 40px;
+  border: 1px solid #87a4d9;
+  text-align: center;
+}
+
+.counsel-section .counsel-txt .btn-box a:first-child {
+  margin-right: 20px;
+}
+
+.counsel-section .counsel-txt .btn-box a:last-child {
+  background-color: #fff;
+  color: #87a4d9;
+}
+
+.counsel-section .counsel-txt .btn-box:hover a:last-child {
+  color: #5c84ce;
+}
+
+/* 피부 진단 상담 반응형 */
+@media (max-width: 1550px) {
+  .counsel-section .counsel-txt {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .counsel-section .section-inner > div {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .counsel-section .section-inner > .img-box {
+    display: none;
+  }
+
+  .counsel-section .counsel-txt {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .counsel-section .counsel-txt .btn-box a {
+    display: block;
+  }
+
+  .counsel-section .counsel-txt .btn-box a:first-child {
+    margin-right: 0;
+  }
+
+  .counsel-section .counsel-txt .btn-box a:last-child {
+    margin-top: 15px;
+  }
+}
+
+/* 아이템 슬라이더 */
+.item-slider-section {
+  background-color: rgba(135, 164, 217, 0.15);
+  margin-bottom: 200px;
+}
+
+.item-slider-section .section-inner {
+  height: 780px;
+  position: relative;
+}
+
+.item-slider {
+  margin-top: 47px;
+  margin-bottom: 0 !important;
+  position: absolute;
+  width: 96%;
+  right: -10%;
+}
+
+.item-slider .slick-track {
+  padding: 10px 0;
+}
+
+.item-slider .slick-list {
+  margin: 0 -15px;
+}
+
+.item-slider .slick-slide {
+  margin: 0 15px;
+}
+
+.item-slider .item {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 아이템 슬라이더 텍스트 */
+.item-txt,
+.video-txt {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.item-txt span,
+.video-txt span {
+  display: block;
+}
+
+.item-txt .item-name,
+.video-txt .video-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+.item-txt .item-description,
+.video-txt .video-description {
+  font-size: 1.125em;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+/* 아이템 슬라이더 좌우 이동버튼 */
+.item-slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  left: -80px;
+  transform: translateY(-50%);
+}
+
+.item-slider .arrow-next {
+  color: #5c84ce;
+  font-size: 2em;
+  padding: 5px;
+}
+
+/* 아이템 슬라이더 페이지 버튼 */
+.item-slider .slick-dots {
+  width: auto;
+  left: 37%;
+  transform: translateX(-50%);
+  bottom: -50px;
+}
+
+.item-slider .slick-dots li {
+  width: auto;
+  height: auto;
+  margin: 0 6px;
+}
+
+.item-slider .slick-dots button {
+  width: 11px;
+  height: 11px;
+  box-sizing: content-box;
+  background: #ccc;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.item-slider .slick-dots button::before {
+  display: none;
+}
+
+.item-slider .slick-dots .slick-active button {
+  background-color: #5c84ce;
+}
+
+/* 아이템 슬라이더 반응형 */
+@media (max-width: 1200px) {
+  .item-slider-section {
+    margin-bottom: 40px;
+  }
+
+  .item-slider-section .section-inner .title-area,
+  .video-content-section .title-area {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .item-slider-section {
+    margin-bottom: 0;
+  }
+
+  .item-slider-section .section-inner {
+    height: auto;
+    padding: 60px 0 80px;
+  }
+
+  .item-slider {
+    width: 100%;
+    position: static;
+    padding: 0 15px;
+    margin-top: 30px;
+  }
+
+  .item-slider .slick-list {
+    margin: 0 -7.5px;
+  }
+
+  .item-slider .slick-slide {
+    margin: 0 7.5px;
+  }
+
+  .item-slider .slick-dots {
+    width: 100%;
+    left: 50%;
+    bottom: 35px;
+  }
+
+  .item-slider .slick-dots li {
+    margin-top: 10px;
+  }
+
+  .item-txt,
+  .video-txt {
+    padding: 15px;
+  }
+
+  .item .item-hover {
+    display: none;
+  }
+}
+
+/* 비디오 컨텐츠 */
+.video-content-section .title-area {
+  text-align: center;
+}
+
+.video-content-section .video-list {
+  flex-wrap: nowrap;
+  margin: 0 -15px;
+  margin-top: 64px;
+}
+
+.video-content-section .video-list li {
+  flex-basis: 33.3333%;
+  max-width: 33.3333%;
+  padding: 0 15px;
+  position: relative;
+}
+
+.video-content-section .video-list li > div {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-content-section .video-list li .iframe-wrap {
+  position: relative;
+}
+
+.video-content-section .video-list li .iframe-wrap::before {
+  content: "";
+  display: block;
+  padding-top: calc(9 / 16 * 100%);
+}
+
+.video-content-section .video-list li .iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 비디오 컨텐츠 반응형 */
+@media (max-width: 1200px) {
+  .video-content-section .video-list {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-content-section .video-list-wrap {
+    overflow-x: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .video-content-section .video-list-wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+  .video-content-section .video-list {
+    margin: 0 -7.5px;
+    margin-top: 30px;
+    width: 800px;
+  }
+
+  .video-content-section .video-list li {
+    padding: 10px 7.5px;
+  }
+}
+
+/* 베스트 상품 */
+.best-item-section .section-inner {
+  margin-top: 150px;
+  padding-top: 0;
+}
+
+.best-item-section .title-bg {
+  background: url("../../img/best_product_bn_1.jpg") no-repeat center;
+  background-size: cover;
+  height: 475px;
+}
+
+.best-item-section .title-bg > .con {
+  height: 100%;
+  align-items: flex-end;
+}
+
+.best-item-section .title-area {
+  background-color: #fff;
+  width: 380px;
+  height: 290px;
+  padding: 45px 40px;
+  margin-bottom: -130px;
+}
+
+.best-item-section .best-item-list {
+  margin: 0 -15px;
+  margin-top: 130px;
+}
+
+.best-item-section .best-item-list li {
+  flex-basis: 25%;
+  max-width: 25%;
+  padding: 15px;
+}
+
+.best-item-section .best-item-list li a {
+  display: block;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 베스트 상품 반응형 */
+@media (max-width: 1200px) {
+  .best-item-section .best-item-list {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .best-item-section .best-item-list {
+    margin: 0 -7.5px;
+    margin-top: 100px;
+  }
+
+  .best-item-section .best-item-list li {
+    flex-basis: 50%;
+    max-width: 50%;
+    padding: 7.5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .best-item-section .section-inner {
+    margin-top: 60px;
+  }
+
+  .best-item-section .title-bg {
+    height: 380px;
+  }
+
+  .best-item-section .title-bg > .con {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .best-item-section .title-area {
+    width: 300px;
+    height: auto;
+    padding: 30px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .best-item-section .best-item-list {
+    margin-top: 22.5px;
+  }
+}
+
+/* 베스트 리뷰 */
+.best-review-section {
+  background-color: #fbf9f7;
+}
+
+.best-review-section .section-inner {
+  max-width: 1340px;
+  margin: 0 auto;
+  margin-top: 150px;
+  justify-content: space-between;
+  padding-bottom: 150px;
+}
+
+.best-review-section .title-area {
+  flex-basis: 380px;
+  max-width: 380px;
+  height: 290px;
+  padding: 45px 40px;
+}
+
+/* 리뷰 내용 */
+.review-container {
+  flex-basis: 880px;
+  max-width: 880px;
+}
+
+.review-container a {
+  display: block;
+}
+
+.review-container ul li {
+  background-color: #fff;
+  padding: 30px;
+  flex-wrap: nowrap;
+}
+
+.review-container ul li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.review-container ul li .review-img {
+  flex-basis: 168px;
+  max-width: 168px;
+}
+
+.review-container ul li .review-txt {
+  flex-basis: calc(100% - 168px);
+  max-width: calc(100% - 168px);
+  padding-left: 30px;
+}
+
+.review-container ul li .review-txt .review-title,
+.review-container ul li .review-txt .review-information,
+.review-container ul li .review-txt .review-substance {
+  display: block;
+}
+
+.review-container ul li .review-txt .review-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.review-container ul li .review-txt .review-information {
+  margin-bottom: 8px;
+}
+
+.review-container ul li .review-txt .review-information span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.review-container ul li .review-txt .review-substance {
+  font-size: 0.875em;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* 라인수 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 베스트 리뷰 별점 */
+.review-container ul li .review-txt .review-information .score,
+.review-container ul li .review-txt .review-information .score .score-fill {
+  width: 107px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 107px 16px;
+}
+
+.review-container ul li .review-txt .review-information .score {
+  background-image: url(../../img/star_score.svg);
+  margin-left: 15px;
+  position: relative;
+}
+
+.review-container ul li .review-txt .review-information .score .score-fill {
+  background-image: url(../../img/star_score_fill.svg);
+  position: absolute;
+}
+
+/* 베스트 리뷰 반응형 */
+@media (max-width: 1200px) {
+  .best-review-section .title-area,
+  .review-container {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .best-review-section .section-inner {
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .best-review-section .title-area {
+    padding: 30px;
+    padding-top: 0;
+    height: auto;
+  }
+
+  .review-container ul {
+    padding: 0 15px;
+  }
+
+  .review-container ul li {
+    padding: 15px;
+  }
+
+  .review-container ul li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .review-container ul li .review-txt .review-substance,
+  .review-container ul li .review-txt .review-information {
+    font-size: 1.125em;
+  }
+
+  .review-container ul li .review-img {
+    display: none;
+  }
+
+  .review-container ul li .review-txt {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .review-container ul li .review-txt .review-substance {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+  }
+
+  .review-container ul li .review-txt .review-information .score,
+  .review-container ul li .review-txt .review-information .score .score-fill {
+    width: 90px;
+    height: 13px;
+    background-size: 90px 13px;
+  }
+}
+
+/* 메인 index 공통 반응형 */
+@media (max-width: 767px) {
+  section > .section-inner {
+    padding-top: 60px;
+    font-size: 11px;
+  }
+}

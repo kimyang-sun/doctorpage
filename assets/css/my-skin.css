@@ -1,0 +1,481 @@
+@charset "UTF-8";
+
+/* 상단 배너 내부 텍스트 */
+.top-bn .bn-inner {
+  position: relative;
+  height: 100%;
+}
+
+.top-bn .bn-inner-txt {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-top: 50px;
+}
+
+.top-bn .bn-inner-txt span {
+  font-size: 1.25em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.top-bn .bn-inner-txt h2 {
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+
+.top-bn .bn-inner-txt .btn-test {
+  font-size: 1.25em;
+  display: inline-block;
+  width: 200px;
+  padding: 13.5px 0;
+  background-color: #383838;
+  color: #fff;
+  text-align: center;
+}
+
+/* 상단 배너 내부 텍스트 반응형 */
+@media (min-width: 1201px) {
+  .top-bn .bn-inner-txt {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .top-bn .bn-inner-txt {
+    padding-left: 20px;
+    top: 30%;
+  }
+
+  .top-bn .bn-inner-txt span {
+    font-size: 1.25em;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .top-bn .bn-inner-txt h2 {
+    font-size: 2.5em;
+  }
+
+  .top-bn .bn-inner-txt .btn-test {
+    font-size: 1.25em;
+    width: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-bn {
+    height: 420px;
+  }
+}
+
+/* 피부타입 확인 섹션 */
+section .section-inner {
+  padding: 160px 0;
+}
+
+section .title-area {
+  text-align: center;
+}
+
+section h2.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+section p.sub-title {
+  font-size: 1.25em;
+  color: #999;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 피부타입 리스트 */
+.skin-type-list {
+  margin-top: 65px;
+}
+
+.skin-type-list ul {
+  justify-content: space-between;
+}
+
+.skin-type-list ul li {
+  padding: 8px 0;
+  flex-basis: calc(100% / 8);
+  max-width: calc(100% / 8);
+  text-align: center;
+}
+
+.skin-type-list ul li button {
+  font-size: 1.875em;
+  color: #fff;
+  width: 150px;
+  height: 150px;
+  background-color: #eee;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.skin-type-list ul li.active button {
+  background-color: #87a4d9;
+  box-shadow: 2px 4px 8px rgba(135, 164, 217, 0.7);
+}
+
+/* 피부타입 정보 */
+.skin-type-information {
+  margin-top: 75px;
+  display: none;
+}
+
+.skin-type-information.active {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-wrap: nowrap;
+}
+
+.skin-type-information-1 {
+  background-color: #87a4d9;
+  color: #fff;
+  padding: 24px;
+  flex-basis: 546px;
+  max-width: 546px;
+}
+
+.skin-type-information-1 .skin-type-title {
+  margin-bottom: 5px;
+}
+
+.skin-type-information-1 .skin-type-title b {
+  font-size: 1.875em;
+}
+
+.skin-type-information-1 p {
+  margin-bottom: 24px;
+}
+
+.skin-type-information-1 .hashtag {
+  align-self: flex-end;
+}
+
+.skin-type-information-1 .hashtag li {
+  display: inline-block;
+}
+
+.skin-type-information-1 .hashtag li:not(:first-child) {
+  margin-left: 5px;
+}
+
+/* 피부타입 정보 속성 */
+.skin-type-information-2 {
+  border: 1px solid #ddd;
+  flex-grow: 1;
+}
+
+.skin-type-information-2 .skin-type-property {
+  flex-basis: 640px;
+  max-width: 640px;
+  align-items: center;
+  padding: 24px;
+}
+
+.skin-type-information-2 .skin-type-property li {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.skin-type-information-2 .skin-type-property li div {
+  font-size: 1.5em;
+}
+
+.skin-type-information-2 .skin-type-property li div b {
+  color: #87a4d9;
+}
+
+.skin-type-information-2 .skin-type-property li span {
+  font-size: 0.875em;
+}
+
+.skin-type-information-2 > div {
+  align-items: center;
+}
+
+.skin-type-information-2 .btn-recommend {
+  background-color: #87a4d9;
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  transition: all 0.3s;
+}
+
+.skin-type-information-2 .btn-recommend span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.skin-type-information-2 .btn-recommend:hover {
+  background-color: #5c84ce;
+}
+
+/* 피부타입 확인 반응형 */
+@media (max-width: 1340px) {
+  .skin-type-information.active {
+    flex-wrap: wrap;
+  }
+
+  .skin-type-information-1,
+  .skin-type-information-2,
+  .skin-type-information-2 .skin-type-property,
+  .skin-type-information-2 > div {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .skin-type-information-2 > div {
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .skin-type-information-2 .btn-recommend {
+    width: auto;
+    height: auto;
+    border-radius: 27px;
+    padding: 13px 40px;
+  }
+
+  .skin-type-information-2 .btn-recommend span {
+    position: static;
+    transform: translate(0, 0);
+  }
+
+  .skin-type-information-2 .btn-recommend span br {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  section .section-inner {
+    padding: 60px 15px;
+  }
+
+  .skin-type-list ul li button {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skin-type-information-2 .skin-type-property li {
+    padding: 10px;
+  }
+
+  .skin-type-information-1 p,
+  .skin-type-information-1 .hashtag,
+  .skin-type-information-2 .skin-type-property li span {
+    font-size: 1.25em;
+  }
+
+  .skin-type-information-2 .btn-recommend {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 991px) {
+  .skin-type-list ul li {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+@media (max-width: 575px) {
+  .skin-type-list ul li button {
+    width: 72px;
+    height: 72px;
+    font-size: 1.25em;
+    background-color: #ddd;
+  }
+
+  .skin-type-list {
+    margin-top: 30px;
+  }
+
+  .skin-type-information {
+    margin-top: 40px;
+  }
+
+  .skin-type-information-1,
+  .skin-type-information-2 > div {
+    padding: 15px;
+  }
+
+  .skin-type-information-2 .skin-type-property {
+    padding: 10px;
+  }
+
+  .skin-type-information-2 .btn-recommend {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 피부유형 조사 시작단계 */
+.header-inner {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-logo .logo-color {
+  display: block !important;
+}
+
+.header-logo .logo-white {
+  display: none !important;
+}
+
+.header-gnb ul li a,
+.header-util li a {
+  color: #383838;
+}
+
+.skin-test-section {
+  background-color: #fbf9f7;
+}
+
+.skin-test-section .section-inner {
+  justify-content: space-between;
+  align-items: center;
+  padding: 160px 0 220px;
+}
+
+.skin-test-description h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #87a4d9;
+}
+
+.skin-test-description ol li,
+.skin-test-description p {
+  font-size: 1.25em;
+}
+
+.skin-test-description ol {
+  margin: 40px 0;
+}
+
+.skin-test-description ol li b {
+  padding-right: 5px;
+}
+
+/* 피부유형 조사 대상자 정보입력 */
+.skin-test-user {
+  flex-basis: 540px;
+  max-width: 540px;
+}
+
+.skin-test-user > span {
+  display: block;
+  font-size: 1.25em;
+  color: #87a4d9;
+  margin-bottom: 25px;
+}
+
+.skin-test-user input {
+  width: 100%;
+  height: 54px;
+  border-radius: 27px;
+  box-shadow: 0 5px 10px rgba(135, 164, 217, 0.5);
+  padding: 0 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.skin-test-user input:focus {
+  border-color: #87a4d9;
+}
+
+.test-btn-box {
+  text-align: right;
+  margin-top: 50px;
+}
+
+.test-btn-box button,
+.test-btn-box a {
+  width: 200px;
+  transition: background-color 0.3s;
+  background: url("../../img/btn_arrow_right.png") no-repeat 80% 42% #87a4d9;
+  color: #fff;
+  text-align: left;
+  padding: 15px 0;
+  padding-left: 30px;
+  border-radius: 27px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.test-btn-box button:hover,
+.test-btn-box a:hover {
+  background-color: #5c84ce;
+}
+
+/* 피부유형 조사 시작단계 반응형 */
+@media (min-width: 1201px) {
+  .skin-test-section {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .skin-test-section .section-inner {
+    padding: 60px 15px;
+  }
+
+  .skin-test-section .section-inner > div {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .skin-test-user {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .skin-test-description ol {
+    margin: 20px 0;
+  }
+
+  .skin-test-user input {
+    font-size: 1.25em;
+    height: 46px;
+  }
+
+  .test-btn-box {
+    margin-top: 20px;
+  }
+
+  .test-btn-box button,
+  .test-btn-box a {
+    font-size: 1.25em;
+    width: 100%;
+    text-align: center;
+    background: #87a4d9;
+    padding-left: 0;
+  }
+}
+
+/* 메인 컨텐츠 부분 공통 반응형 */
+@media (max-width: 767px) {
+  .wrap {
+    font-size: 11px;
+  }
+}

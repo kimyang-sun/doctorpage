@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/6f88dac71d.js" crossorigin="anonymous"></script>
+
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../../assets/css/default.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/solution.css">
+
+</head>
+
+<body>
+    <!-- 상단 헤더 {-->
+    <header>
+        <div class="header-inner flex-box only-1200-up">
+            <h1 class="header-logo">
+                <a href="../../index.html">
+                    <span class="blind">홈으로 가기</span>
+                    <img src="../../img/logo_w.png" alt="닥터페이지 로고" class="logo-white">
+                    <img src="../../img/logo.png" alt="닥터페이지 로고" class="logo-color">
+                </a>
+            </h1>
+            <nav class="header-gnb">
+                <ul class="flex-box">
+                    <li><a href="../my-skin/my-skin-main.html">My Skin</a></li>
+                    <li>
+                        <a href="../solution/solution-acne.html">Soution Type</a>
+                        <ul>
+                            <li><a href="../solution/solution-acne.html">Acne</a></li>
+                            <li><a href="../solution/solution-wrinkle.html">Wrinkle</a></li>
+                            <li><a href="../solution/solution-dryskin.html">Dry Skin</a></li>
+                            <li><a href="../solution/solution-whitening.html">Whitening</a></li>
+                            <li><a href="../solution/solution-sunblock.html">Sun block</a></li>
+                            <li><a href="../solution/solution-sebum.html">Sebum</a></li>
+                            <li><a href="../solution/solution-deadskin.html">Dead Skin</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../product/product-main.html">Product Type</a>
+                        <ul>
+                            <li><a href="../product/product-main.html">Product Type</a></li>
+                            <li><a href="../product/product-cream.html">Cream</a></li>
+                            <li><a href="../product/product-essence.html">Essence</a></li>
+                            <li><a href="../product/product-maskpack.html">Mask Pack</a></li>
+                            <li><a href="../product/product-cleansing.html">Cleansing</a></li>
+                            <li><a href="../product/product-sunblock.html">Sun block</a></li>
+                            <li><a href="../product/product-toner.html">Toner</a></li>
+                            <li><a href="../product/product-lotion.html">Lotion</a></li>
+                            <li><a href="../product/product-ampule.html">Ampule</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../for-my-skin/for-my-skin-video.html">For My Skin</a>
+                        <ul>
+                            <li><a href="../for-my-skin/for-my-skin-video.html">Video Content</a></li>
+                            <li><a href="../for-my-skin/for-my-skin-column.html">Column</a></li>
+                            <li><a href="../for-my-skin/for-my-skin-education.html">Education</a></li>
+                            <li><a href="../for-my-skin/for-my-skin-sharing.html">Information</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../to-doctor/doctor-mentor.html">To Doctor</a>
+                        <ul>
+                            <li><a href="../to-doctor/doctor-mentor.html">Mentor</a></li>
+                            <li><a href="../to-doctor/doctor-introduction.html">Hospital</a></li>
+                            <li><a href="../to-doctor/doctor-brand.html">Brand</a></li>
+                            <li><a href="../to-doctor/doctor-ingredient.html">Ingredient</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../community/qna.html">Community</a>
+                        <ul>
+                            <li><a href="../community/qna.html">QnA</a></li>
+                            <li><a href="../community/best-review.html">Best Review</a></li>
+                            <li><a href="../community/contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="header-util flex-box">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><button type="button" class="btn-header-search"><i class="fas fa-search block"></i></button></li>
+            </ul>
+        </div>
+        <div class="m-header-inner only-1200-down">
+            <div class="m-header-top flex-box">
+                <button type="button" class="m-btn-side-bar">
+                    <i class="fas fa-bars block"></i>
+                </button>
+                <h1 class="m-header-logo">
+                    <a href="../../index.html">
+                        <span class="blind">홈으로 가기</span>
+                        <img src="../../img/logo.png" alt="닥터페이지 로고">
+                    </a>
+                </h1>
+                <button type="button" class="m-btn-header-search">
+                    <i class="fas fa-search block"></i>
+                </button>
+            </div>
+            <div class="m-side-bar-wrap">
+                <div class="m-side-bar">
+                    <div class="m-side-bar-top">
+                        <div class="m-side-bar-logo">
+                            <img src="../../img/logo_w.png" alt="닥터페이지 로고">
+                        </div>
+
+                        <!-- 비로그인 
+                            <div class="user-information">
+                                <a href="#" class="login">로그인</a>
+                                <a href="#" class="logout">회원가입</a>
+                                <div class="user-skin-type">
+                                    <span>My Skin Type</span>
+                                    <span class="block not-login">로그인 후 이용해 주시기 바랍니다</span>
+                                </div>
+                            </div>
+                            -->
+
+                        <!-- 로그인 -->
+                        <div class="user-information">
+                            <span class="user-name">김○○ 고객님</span>
+                            <a href="#" class="logout">로그아웃</a>
+                            <div class="user-skin-type">
+                                <span>My Skin Type</span>
+                                <div>나의 피부타입은 <span class="skin-type">DSPW</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="m-side-bar-gnb">
+                        <ul>
+                            <li><a href="../my-skin/my-skin-main.html" class="m-depth-1">My Skin <span>테스트 시작<i class="fas fa-chevron-right"></i></span></a></li>
+                            <li>
+                                <span class="m-depth-1">Solution Type<i class="fas fa-chevron-right"></i></span>
+                                <ul>
+                                    <li><a href="../solution/solution-acne.html">Acne</a></li>
+                                    <li><a href="../solution/solution-wrinkle.html">Wrinkle</a></li>
+                                    <li><a href="../solution/solution-dryskin.html">Dry Skin</a></li>
+                                    <li><a href="../solution/solution-whitening.html">Whitening</a></li>
+                                    <li><a href="../solution/solution-sunblock.html">Sun block</a></li>
+                                    <li><a href="../solution/solution-sebum.html">Sebum</a></li>
+                                    <li><a href="../solution/solution-deadskin.html">Dead Skin</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="m-depth-1">Product Type<i class="fas fa-chevron-right"></i></span>
+                                <ul>
+                                    <li><a href="../product/product-main.html">Product Type</a></li>
+                                    <li><a href="../product/product-cream.html">Cream</a></li>
+                                    <li><a href="../product/product-essence.html">Essence</a></li>
+                                    <li><a href="../product/product-maskpack.html">Mask Pack</a></li>
+                                    <li><a href="../product/product-cleansing.html">Cleansing</a></li>
+                                    <li><a href="../product/product-sunblock.html">Sun block</a></li>
+                                    <li><a href="../product/product-toner.html">Toner</a></li>
+                                    <li><a href="../product/product-lotion.html">Lotion</a></li>
+                                    <li><a href="../product/product-ampule.html">Ampule</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="m-depth-1">For My Skin<i class="fas fa-chevron-right"></i></span>
+                                <ul>
+                                    <li><a href="../for-my-skin/for-my-skin-video.html">Video Content</a></li>
+                                    <li><a href="../for-my-skin/for-my-skin-column.html">Column</a></li>
+                                    <li><a href="../for-my-skin/for-my-skin-education.html">Education</a></li>
+                                    <li><a href="../for-my-skin/for-my-skin-sharing.html">Information</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="m-depth-1">To Doctor<i class="fas fa-chevron-right"></i></span>
+                                <ul>
+                                    <li><a href="../to-doctor/doctor-mentor.html">Mentor</a></li>
+                                    <li><a href="../to-doctor/doctor-introduction.html">Hospital</a></li>
+                                    <li><a href="../to-doctor/doctor-brand.html">Brand</a></li>
+                                    <li><a href="../to-doctor/doctor-ingredient.html">Ingredient</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="m-depth-1">Community<i class="fas fa-chevron-right"></i></span>
+                                <ul>
+                                    <li><a href="../community/qna.html">QnA</a></li>
+                                    <li><a href="../community/best-review.html">Best Review</a></li>
+                                    <li><a href="../community/contact.html">Contact Us</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="search-box flex-box">
+            <div class="search-box-inner">
+                <div class="search-box-logo"><span class="blind">닥터페이지 로고</span><img src="../../img/logo.png" alt="닥터페이지 로고"></div>
+                <form action="#" class="header-search">
+                    <fieldset>
+                        <label for="header_search_input" class="blind">검색</label>
+                        <input type="text" name="search" id="header_search_input" placeholder="검색어를 입력해주세요">
+                        <button type="submit" class="btn-search">
+                            <span class="blind">검색하기</span>
+                            <i class="fas fa-search block"></i>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <button type="button" class="btn-close-search">
+                <span class="blind">검색창 닫기</span>
+                <i class="fas fa-times block"></i>
+            </button>
+        </div>
+    </header>
+    <!--} 상단 헤더 끝 -->
+
+    <!-- 솔루션 타입 -->
+    <main role="main">
+        <div class="wrap">
+            <!-- 상단 배너 -->
+            <div class="top-bn">
+                <div class="top-bn-img" style="background-image:url(../../img/top_bn_2.jpg)"><span class="blind">페이지 상단
+                        배너 이미지</span></div>
+                <div class="bn-inner acne-bn">
+                    <div class="bn-inner-txt flex-box">
+                        <div class="bn-inner-txt-top">
+                            <h2 class="con">Solution Type</h2>
+                            <span class="con">피부 유형별 추천제품 베스트제품</span>
+                        </div>
+                        <div class="bn-inner-txt-bottom">
+                            <h3 class="con"><span>Acne</span></h3>
+                            <span class="con">여드름피부를 위한 집중 케어 라인</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 상품 레이아웃 -->
+            <section class="item-section">
+                <div class="section-inner con">
+                    <ul class="item-list item-list-2 flex-box">
+                        <li class="item">
+                            <a href="#">
+                                <div class="img-box"><img src="../../img/product_1.jpg" alt="상품 이미지"></div>
+                                <div class="item-txt">
+                                    <span class="item-name">What is Lorem Ipsum?</span>
+                                    <span class="item-price">47,000</span>
+                                    <span class="item-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </div>
+                                <div class="item-hover flex-box">
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-eye"></i>
+                                        <span>자세히 보기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>장바구니 담기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-heart"></i>
+                                        <span>관심상품 등록</span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <div class="img-box"><img src="../../img/product_2.jpg" alt="상품 이미지"></div>
+                                <div class="item-txt">
+                                    <span class="item-name">What is Lorem Ipsum?</span>
+                                    <span class="item-price">47,000</span>
+                                    <span class="item-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </div>
+                                <div class="item-hover flex-box">
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-eye"></i>
+                                        <span>자세히 보기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>장바구니 담기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-heart"></i>
+                                        <span>관심상품 등록</span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <div class="img-box"><img src="../../img/product_3.jpg" alt="상품 이미지"></div>
+                                <div class="item-txt">
+                                    <span class="item-name">What is Lorem Ipsum?</span>
+                                    <span class="item-price">47,000</span>
+                                    <span class="item-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </div>
+                                <div class="item-hover flex-box">
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-eye"></i>
+                                        <span>자세히 보기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>장바구니 담기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-heart"></i>
+                                        <span>관심상품 등록</span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <div class="img-box"><img src="../../img/product_4.jpg" alt="상품 이미지"></div>
+                                <div class="item-txt">
+                                    <span class="item-name">What is Lorem Ipsum?</span>
+                                    <span class="item-price">47,000</span>
+                                    <span class="item-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </div>
+                                <div class="item-hover flex-box">
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-eye"></i>
+                                        <span>자세히 보기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>장바구니 담기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-heart"></i>
+                                        <span>관심상품 등록</span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <div class="img-box"><img src="../../img/product_4.jpg" alt="상품 이미지"></div>
+                                <div class="item-txt">
+                                    <span class="item-name">What is Lorem Ipsum?</span>
+                                    <span class="item-price">47,000</span>
+                                    <span class="item-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </div>
+                                <div class="item-hover flex-box">
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-eye"></i>
+                                        <span>자세히 보기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>장바구니 담기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-heart"></i>
+                                        <span>관심상품 등록</span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <div class="img-box"><img src="../../img/product_4.jpg" alt="상품 이미지"></div>
+                                <div class="item-txt">
+                                    <span class="item-name">What is Lorem Ipsum?</span>
+                                    <span class="item-price">47,000</span>
+                                    <span class="item-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </div>
+                                <div class="item-hover flex-box">
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-eye"></i>
+                                        <span>자세히 보기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>장바구니 담기</span>
+                                    </button>
+                                    <button type="button" href="#" onclick="location.href='#'">
+                                        <i class="fas fa-heart"></i>
+                                        <span>관심상품 등록</span>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="page-list flex-box">
+                        <li class="page page-start"><a href="#"><i class="fas fa-angle-double-left"><span class="blind">처음으로</span></i></a></li>
+                        <li class="page current-page"><a href="#"><span class="blind">페이지 버튼</span></a></li>
+                        <li class="page"><a href="#"><span class="blind">페이지 버튼</span></a></li>
+                        <li class="page"><a href="#"><span class="blind">페이지 버튼</span></a></li>
+                        <li class="page"><a href="#"><span class="blind">페이지 버튼</span></a></li>
+                        <li class="page"><a href="#"><span class="blind">페이지 버튼</span></a></li>
+                        <li class="page page-end"><a href="#"><i class="fas fa-angle-double-right"><span class="blind">마지막으로</span></i></a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 하단 푸터 {-->
+    <footer>
+        <div class="footer-inner con flex-box">
+            <div class="footer-logo">
+                <div class="img-box only-991-up"><img src="../../img/footer_logo.png" alt="닥터페이지 로고"></div>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보 처리방침</a>
+                <span class="only-991-up">Copyright © DOTOR PAGE. All rights reserved.</span>
+            </div>
+            <div class="footer-information flex-box">
+                <div class="footer-contact only-991-down">
+                    <b class="footer-sub-title">고객센터</b>
+                    <p>
+                        <span class="call">02-0000-0000</span> <br>
+                        평일 09:00 AM - 17:00 PM <br class="only-991-up">점심시간 : 12시 ~ 1시 <br>
+                        배송안내 : CJ대한통운 (Tel. 1588-1255) <br>
+                        계좌정보 : 000-000-000000 신한은행 <br>
+                        주식회사 리우에이치앤씨
+                    </p>
+                </div>
+                <div class="footer-company">
+                    <b class="footer-sub-title">리우에이치앤씨</b>
+                    <p>
+                        <span>대표이사 : 김준한 <br>
+                            사업자등록번호 : 359-87-00301 <br>
+                            주소 : 서울특별시 영등포구 국회대로72길 4, <br>
+                            6층 517호(여의도동, 아이비피아빌딩) <br>
+                            대표번호 : 02-6927-2699 <br>
+                            통신판매업신고 : 제2016-서울강남-01468호
+                    </p>
+                </div>
+                <div class="footer-contact only-991-up">
+                    <b class="footer-sub-title">고객센터</b>
+                    <p>
+                        02-0000-0000 <br>
+                        평일 09:00 AM - 17:00 PM <br>점심시간 : 12시 ~ 1시 <br>
+                        배송안내 : CJ대한통운 (Tel. 1588-1255) <br>
+                        계좌정보 : 000-000-000000 신한은행 <br>
+                        주식회사 리우에이치앤씨
+                    </p>
+                </div>
+                <div class="footer-alliance">
+                    <b class="footer-sub-title">제휴문의</b>
+                    <p>
+                        제품사입/입점문의 : sales@gmail.com <br>
+                        마케팅제휴 문의 : marketing@gmail.com <br>
+                        해외수출 문의 : global@gmail.com
+                    </p>
+                </div>
+            </div>
+            <div class="m-footer-logo only-991-down">
+                <div class="img-box"><img src="../../img/footer_logo.png" alt="닥터페이지 로고"></div>
+            </div>
+            <div class="footer-sns">
+                <ul class="flex-box">
+                    <li><a href="#"><img src="../../img/instagram.png" alt="인스타그램"><span class="blind">인스타그램
+                                바로가기</span></a>
+                    </li>
+                    <li><a href="#"><img src="../../img/kakaotalk.png" alt="카카오톡"><span class="blind">카카오톡
+                                바로가기</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright only-991-down">Copyright © DOTOR PAGE. All rights reserved.</div>
+        </div>
+    </footer>
+    <!--} 하단 푸터 끝 -->
+
+
+    <script src="../../assets/js/common.js" charset="UTF-8"></script>
+</body>
+
+</html>

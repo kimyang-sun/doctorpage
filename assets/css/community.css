@@ -1,0 +1,456 @@
+@charset "UTF-8";
+
+.header-inner {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-logo .logo-color {
+  display: block !important;
+}
+
+.header-logo .logo-white {
+  display: none !important;
+}
+
+.header-gnb ul li a,
+.header-util li a {
+  color: #383838;
+}
+
+.top-bn {
+  height: auto;
+  padding: 160px 0 80px;
+}
+
+.top-bn .bn-inner h2 {
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+/* QNA */
+.qna-bn {
+  background-color: #999;
+  color: #fff;
+}
+
+/* best review */
+.review-bn {
+  text-align: center;
+  color: #87d9d3;
+}
+
+.review-wrap {
+  background-color: #fbf9f7;
+}
+
+.review-container {
+  padding: 100px 0;
+}
+
+.review-container a {
+  display: block;
+}
+
+.review-container .review-list {
+  margin: 0 -15px;
+}
+
+.review-container .review-list li {
+  flex-basis: 50%;
+  max-width: 50%;
+  padding: 15px;
+  flex-wrap: nowrap;
+}
+
+.review-container .review-list li > div {
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+
+.review-container .review-list li .review-img {
+  flex-basis: 168px;
+  max-width: 168px;
+}
+
+.review-container .review-list li .review-txt {
+  flex-basis: calc(100% - 168px);
+  max-width: calc(100% - 168px);
+  padding-left: 30px;
+}
+
+.review-container .review-list li .review-txt .review-title,
+.review-container .review-list li .review-txt .review-information,
+.review-container .review-list li .review-txt .review-substance {
+  display: block;
+}
+
+.review-container .review-list li .review-txt .review-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.review-container .review-list li .review-txt .review-information {
+  margin-bottom: 8px;
+}
+
+.review-container .review-list li .review-txt .review-information span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.review-container .review-list li .review-txt .review-substance {
+  font-size: 0.875em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 라인수 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 베스트 리뷰 별점 */
+.review-container .review-list li .review-txt .review-information .score,
+.review-container
+  .review-list
+  li
+  .review-txt
+  .review-information
+  .score
+  .score-fill {
+  width: 107px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 107px 16px;
+}
+
+.review-container .review-list li .review-txt .review-information .score {
+  background-image: url(../../img/star_score.svg);
+  margin-left: 15px;
+  position: relative;
+}
+
+.review-container
+  .review-list
+  li
+  .review-txt
+  .review-information
+  .score
+  .score-fill {
+  background-image: url(../../img/star_score_fill.svg);
+  position: absolute;
+}
+
+/* 리뷰 페이지 버튼 */
+.review-container .page-list li.current-page a {
+  background-color: #87d9d3;
+}
+
+.review-container .page-list li.page-start a,
+.review-container .page-list li.page-end a {
+  color: #87d9d3;
+}
+
+/* 글쓰기 버튼 */
+.review-container .btn-box {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.review-container .btn-box .btn-write {
+  display: inline-block;
+  padding: 10px 60px;
+  background-color: #87d9d3;
+  color: #fff;
+  border-radius: 27px;
+}
+
+/* 베스트 리뷰 반응형 */
+@media (max-width: 991px) {
+  .review-container .review-list li {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .review-container {
+    padding: 60px 0;
+  }
+
+  .review-container .review-list {
+    margin: 0;
+  }
+
+  .review-container .review-list {
+    padding: 0 15px;
+  }
+
+  .review-container .review-list li {
+    padding: 0;
+    height: auto;
+  }
+
+  .review-container .review-list li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .review-container .review-list li > div {
+    padding: 20px;
+  }
+
+  .review-container .review-list li .review-txt .review-substance,
+  .review-container .review-list li .review-txt .review-information {
+    font-size: 1.125em;
+  }
+
+  .review-container .review-list li .review-img {
+    display: none;
+  }
+
+  .review-container .review-list li .review-txt {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .review-container .review-list li .review-txt .review-substance {
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .review-container .review-list li .review-txt .review-information .score,
+  .review-container
+    .review-list
+    li
+    .review-txt
+    .review-information
+    .score
+    .score-fill {
+    width: 90px;
+    height: 13px;
+    background-size: 90px 13px;
+  }
+
+  .review-container .btn-box {
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .review-container .btn-box .btn-write {
+    font-size: 1.25em;
+    width: 100%;
+  }
+}
+
+/* contact us */
+.contact-bn {
+  background-color: #87a4d9;
+  color: #fff;
+}
+
+.contact-form {
+  padding: 150px 0 120px;
+}
+
+.contact-register > .flex-box {
+  padding: 30px 0;
+  align-items: center;
+}
+
+.contact-register > .flex-box:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.contact-register > .flex-box:nth-of-type(1) {
+  border-top: 2px solid #87a4d9;
+}
+
+.contact-register > .flex-box:last-child {
+  border-bottom: 2px solid #87a4d9;
+}
+
+.contact-register .category-name,
+.contact-register .category-content {
+  font-size: 1.25em;
+}
+
+.contact-register .category-name {
+  flex-basis: 30%;
+  max-width: 30%;
+  text-align: center;
+  align-self: center;
+}
+
+.contact-register .category-content {
+  flex-basis: 70%;
+  max-width: 70%;
+  padding: 0 15px;
+}
+
+.contact-register .category-content input[type="text"] {
+  font-size: 16px;
+  background-color: #f5f5f5;
+  padding: 0 15px;
+  border: 1px solid #f5f5f5;
+  border-radius: 16px;
+  width: 100%;
+  height: 70px;
+}
+
+.contact-register .category-content input[type="text"]:focus {
+  border-color: #87a4d9;
+}
+
+.contact-register .number-input-box input[type="text"] {
+  flex-basis: 120px;
+  max-width: 120px;
+  width: auto;
+}
+
+.contact-register .number-input-box span {
+  display: inline-block;
+  padding: 0 10px;
+  align-self: center;
+}
+
+.contact-register .category-content textarea {
+  font-size: 16px;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border: 1px solid #f5f5f5;
+  border-radius: 16px;
+  width: 100%;
+  min-height: 250px;
+}
+
+.contact-register .category-content textarea:focus {
+  border-color: #87a4d9;
+}
+
+/* 등록 버튼*/
+.contact-form .btn-box {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.contact-form .btn-box .btn-submit {
+  font-size: 1.5em;
+  padding: 13px 120px;
+  border-radius: 36px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #363636;
+  color: #fff;
+}
+
+/* contact us 반응형 */
+@media (max-width: 991px) {
+  .contact-register {
+    padding: 0 15px;
+  }
+
+  .contact-register .category-content {
+    padding: 0 0 0 15px;
+  }
+
+  .contact-register .category-content .image-file-list li {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .contact-register .category-content .image-file-list li label {
+    padding: 10px 0;
+  }
+
+  .contact-form .btn-box {
+    padding: 0 15px;
+    margin-top: 40px;
+  }
+
+  .contact-form .btn-box .btn-submit {
+    width: 100%;
+    font-size: 1.25em;
+    padding: 13px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form {
+    padding: 60px 0;
+  }
+
+  .contact-register h2 {
+    margin-bottom: 20px;
+  }
+
+  .contact-register:first-child {
+    margin-bottom: 60px;
+  }
+
+  .contact-register .category-name {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  .contact-register .category-content {
+    flex-basis: 75%;
+    max-width: 75%;
+    justify-content: space-around;
+  }
+
+  .contact-register .age-content {
+    padding: 0 30px;
+  }
+
+  .contact-register > .flex-box {
+    padding: 20px 0;
+  }
+
+  .chk-input + label .chk-fill {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-register .category-content input[type="text"] {
+    height: 50px;
+  }
+
+  .contact-register .number-input-box input[type="text"] {
+    flex-basis: 30%;
+    max-width: 30%;
+    padding: 0 10px;
+  }
+
+  .contact-register .number-input-box span {
+    padding: 0;
+    font-size: 0.5em;
+  }
+}
+
+/* 커뮤니티 공통 반응형 */
+@media (max-width: 767px) {
+  .wrap {
+    font-size: 11px;
+  }
+
+  .top-bn {
+    padding: 60px 20px;
+  }
+
+  .top-bn .bn-inner p {
+    font-size: 1.25em;
+  }
+}

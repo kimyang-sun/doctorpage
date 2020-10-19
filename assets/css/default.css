@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+/*  폰트 적용 */
+@font-face {
+  font-family: "Arita-dotum-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400&display=swap&subset=korean");
+
+html,
+body {
+  font-family: "Arita-dotum-Medium", "Noto Sans KR", sans-serif;
+}
+
+/* 노말라이즈 */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+blockquote,
+pre,
+code,
+address,
+ul,
+ol,
+li,
+menu,
+nav,
+section,
+article,
+aside,
+dl,
+dt,
+dd,
+table,
+thead,
+tbody,
+tfoot,
+label,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+hr,
+input,
+button,
+textarea,
+object,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+main,
+header,
+section,
+nav,
+footer,
+aside,
+article,
+figure {
+  display: block;
+}
+
+html {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::selection {
+  background-color: #87a4d9;
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: #87a4d9;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 반응형 */
+html,
+body {
+  overflow-x: hidden;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong,
+th {
+  font-weight: normal;
+  font-family: inherit;
+  color: inherit;
+}
+
+em {
+  font-style: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 라이브러리 */
+.con {
+  margin: 0 auto;
+}
+
+.img-box > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.float-left {
+  float: left;
+  box-sizing: border-box;
+}
+
+.float-right {
+  float: right;
+  box-sizing: border-box;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.font-size-0 {
+  font-size: 0;
+}
+
+.table {
+  display: table;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.flex-box {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+
+input,
+button,
+select,
+fieldset,
+textarea {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+label {
+  display: inline-block;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+  display: none;
+}
+
+/* input type number 에서 화살표 제거 */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* IE 에서 Select box 화살표 제거 */
+select::-ms-expand {
+  display: none;
+}
+
+.blind,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  font-size: 12px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+button {
+  cursor: pointer;
+  outline: none !important;
+}
